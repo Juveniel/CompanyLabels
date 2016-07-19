@@ -23,9 +23,39 @@
 
     </head>
     <body class="@yield('class')">
-        <header>
+       <!-- <header>
+            <div class="wrapper">
+                <div id="logo">
+                    <a href="/">
+                        <img src="#" alt="logo" />
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/portfolio">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog">
 
-        </header>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header> -->
 
         <main role="main" class='content'>
             @yield('content')
