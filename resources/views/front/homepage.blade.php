@@ -1,13 +1,14 @@
 @extends('front.layout')
 
-@section('content')
+@section('nav')
 
+@section('content')
     <div class="fullwidthbanner-container">
         <div class="fullscreenbanner">
             <ul>
                 <li data-transition="boxslide" data-slotamount="7" >
                     <img src="{{asset('images/slider_background.jpg')}}">
-                    <div class="tp-caption tp-fade fadeout "
+                 <!--   <div class="tp-caption tp-fade fadeout "
                          data-x="center"
                          data-hoffset="0"
                          data-y="center"
@@ -44,15 +45,53 @@
                         >
                             <img src="{{asset('images/dot_vector2.png')}}" alt="" >
                         </div>
+                    </div> -->
+
+                    <div class="tp-caption sft rs-parallaxlevel-0 start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="center"
+                         data-voffset="133"
+                         data-speed="800"
+                         data-start="1200"
+                         data-easing="Power3.easeInOut"
+                         data-elementdelay="0.1"
+                         data-endelementdelay="0.1"
+                         data-endspeed="300"
+                    >
+                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/top_text2.png" alt="" data-ww="272" data-hh="13">
+                    </div>
+
+                    <div class="tp-caption tp-fade rs-parallaxlevel-0 start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="center"
+                         data-voffset="197"
+                         data-speed="750"
+                         data-start="1500"
+                         data-easing="Power3.easeInOut"
+                         data-elementdelay="0.1"
+                         data-endelementdelay="0.1"
+                         data-endspeed="300"
+                    >
+                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/crea_text2.png" alt="" data-ww="770" data-hh="73">
+                    </div>
+
+                    <div class="tp-caption sfb rs-parallaxlevel-0 start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="center"
+                         data-voffset="264"
+                         data-speed="800"
+                         data-start="1900"
+                         data-easing="Power3.easeInOut"
+                         data-elementdelay="0.1"
+                         data-endelementdelay="0.1"
+                         data-endspeed="300"
+                    >
+                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/bottom_text2.png" alt="" data-ww="461" data-hh="19">
                     </div>
                 </li>
-               <!-- <li data-transition="boxslide" data-slotamount="7" data-link="http://www.google.de">
-                    <img src="{{asset('images/slider_21.jpg')}}">
-                    <div class="caption sft big_white"  data-x="400" data-y="100" data-speed="700" data-start="1700" data-easing="easeOutBack">KICKSTART YOUR WEBSITE</div>
-                    <div class="caption sfb big_orange"  data-x="400" data-y="142" data-speed="500" data-start="1900" data-easing="easeOutBack">WITH SLIDER REVOLUTION!</div>
-                    <div class="caption lfr medium_grey"  data-x="510" data-y="210" data-speed="300" data-start="2000">UNLIMITED TRANSITIONS</div>
-                </li> -->
-                ...
             </ul>
         </div>
     </div>

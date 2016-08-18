@@ -12626,9 +12626,5 @@ $(document).ready(function() {
         startWithSlide:0
 
     });
-
-
-
-
 });
 //# sourceMappingURL=front.js.map

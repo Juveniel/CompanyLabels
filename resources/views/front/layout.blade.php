@@ -23,14 +23,14 @@
 
     </head>
     <body class="@yield('class')">
-       <!-- <header>
+        <header id="site-header">
             <div class="wrapper">
-                <div id="logo">
+                <div id="logo" class='col-sm-3'>
                     <a href="/">
-                        <img src="#" alt="logo" />
+                        <img src="{{asset('images/helikon_logo.png')}}" alt="logo" />
                     </a>
                 </div>
-                <nav>
+                <nav class='col-sm-8 navbar-right'>
                     <ul class="menu">
                         <li>
                             <a href="/">
@@ -43,8 +43,13 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/login">
+                                Login
+                            </a>
+                        </li>
+                        <li>
                             <a href="blog">
-
+                                Register
                             </a>
                         </li>
                         <li>
@@ -55,7 +60,7 @@
                     </ul>
                 </nav>
             </div>
-        </header> -->
+        </header>
 
         <main role="main" class='content'>
             @yield('content')

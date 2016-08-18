@@ -27,6 +27,7 @@ elixir(function(mix) {
 
     //mix css
     mix.styles([
+        'fonts.css',
         'bootstrap.css',
         'revslider.css',
         'style.css',

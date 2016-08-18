@@ -88,7 +88,8 @@ h1,h3,h4,h5,h6,p {
 }
 h1 {
     font-size:34px;
-    line-height:45px
+    line-height:45px;
+    font-family: "Raleway";
 }
 h2 {
     font-size:24px;
@@ -149,3 +150,50 @@ main{
 .fullwidthbanner-container{
     height:100%;
 }
+
+#site-header{
+    float: left;
+    position: absolute;
+    width:100%;
+    z-index: 99;
+}
+#site-header #logo img{
+    max-width:100%;
+}
+
+#site-header nav ul{
+    float: left;
+    position: relative;
+    width:100%;
+    margin-right:0;
+    padding:17px 0;
+}
+#site-header nav ul li{
+    display: inline;
+    width: 20%;
+    float: left;
+    position: relative;
+
+}
+#site-header nav ul li a{
+    color:#fff;
+    padding:20px;
+    text-align:center;
+    display: inline-block;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    -webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    text-decoration:none;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 16px;
+}
+#site-header nav ul li a:hover{
+    color:#27b899;
+
+    border-bottom:3px solid #27b899;
+    padding-bottom:3px;
+
+}
+

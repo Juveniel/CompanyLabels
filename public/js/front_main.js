@@ -74,8 +74,4 @@ $(document).ready(function() {
         startWithSlide:0
 
     });
-
-
-
-
 });
