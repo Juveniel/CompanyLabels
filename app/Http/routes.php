@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('front.homepage');
 });
+
+Route::get('/login', function () {
+    return view('front.login');
+});
+
