@@ -147,6 +147,10 @@ main{
     height:100%;
 }
 
+.homepage{
+    background: #262626;
+}
+
 .fullwidthbanner-container{
     height:100%;
 }
@@ -156,6 +160,8 @@ main{
     position: absolute;
     width:100%;
     z-index: 99;
+    background: rgba(255,255,255,0) !important;
+    border-bottom: 1px solid rgba(255,255,255,.25);
 }
 #site-header #logo img{
     max-width:100%;
@@ -167,13 +173,14 @@ main{
     width:100%;
     margin-right:0;
     padding:17px 0;
+    margin: 8px 0px;
 }
 #site-header nav ul li{
     display: inline;
     width: 20%;
     float: left;
     position: relative;
-
+    text-align: center;
 }
 #site-header nav ul li a{
     color:#fff;
@@ -190,9 +197,9 @@ main{
     font-size: 16px;
 }
 #site-header nav ul li a:hover{
-    color:#27b899;
+    color:#00ffe4;
 
-    border-bottom:3px solid #27b899;
+    border-bottom:3px solid #00ffe4;
     padding-bottom:3px;
 
 }

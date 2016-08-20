@@ -1,6 +1,6 @@
 @extends('front.layout')
 
-@section('nav')
+@section('body-class', 'homepage')
 
 @section('content')
     <div class="fullwidthbanner-container">
@@ -8,7 +8,7 @@
             <ul>
                 <li data-transition="boxslide" data-slotamount="7" >
                     <img src="{{asset('images/slider_background.jpg')}}">
-                 <!--   <div class="tp-caption tp-fade fadeout "
+                    <div class="tp-caption tp-fade fadeout "
                          data-x="center"
                          data-hoffset="0"
                          data-y="center"
@@ -45,9 +45,24 @@
                         >
                             <img src="{{asset('images/dot_vector2.png')}}" alt="" >
                         </div>
-                    </div> -->
+                    </div>
 
-                    <div class="tp-caption sft rs-parallaxlevel-0 start"
+                    <div class="tp-caption tp-fade"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="center"
+                         data-voffset="200"
+                         data-speed="800"
+                         data-start="500"
+                         data-easing="Power3.easeInOut"
+                         data-elementdelay="0.1"
+                         data-endelementdelay="0.1"
+                         data-endspeed="300"
+                    >
+                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/slider_t_bg2.png" alt="" data-ww="2550" data-hh="247" >
+                    </div>
+
+                    <div class="tp-caption sft"
                          data-x="center"
                          data-hoffset="0"
                          data-y="center"
@@ -59,10 +74,10 @@
                          data-endelementdelay="0.1"
                          data-endspeed="300"
                     >
-                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/top_text2.png" alt="" data-ww="272" data-hh="13">
-                    </div>
+                        <img src="{{asset('images/top_text_bg.png')}}" alt="">
+		            </div>
 
-                    <div class="tp-caption tp-fade rs-parallaxlevel-0 start"
+                    <div class="tp-caption tp-fadet"
                          data-x="center"
                          data-hoffset="0"
                          data-y="center"
@@ -74,10 +89,10 @@
                          data-endelementdelay="0.1"
                          data-endspeed="300"
                     >
-                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/crea_text2.png" alt="" data-ww="770" data-hh="73">
+                        <img src="{{asset('images/creative_bg.png')}}" alt="" >
                     </div>
 
-                    <div class="tp-caption sfb rs-parallaxlevel-0 start"
+                    <div class="tp-caption sfb"
                          data-x="center"
                          data-hoffset="0"
                          data-y="center"
@@ -88,9 +103,12 @@
                          data-elementdelay="0.1"
                          data-endelementdelay="0.1"
                          data-endspeed="300"
+
                     >
-                        <img src="http://cdn.thefoxwp.com/wp-content/uploads/2014/11/bottom_text2.png" alt="" data-ww="461" data-hh="19">
+                        <img src="{{asset('images/bottom_text_bg.png')}}" alt="" >
+
                     </div>
+
                 </li>
             </ul>
         </div>

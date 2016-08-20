@@ -22,39 +22,39 @@
         <link href="{{ elixir('output/front.css') }}" rel="stylesheet">
 
     </head>
-    <body class="@yield('class')">
+    <body class="@yield('body-class')">
         <header id="site-header">
             <div class="wrapper">
                 <div id="logo" class='col-sm-3'>
                     <a href="/">
-                        <img src="{{asset('images/helikon_logo.png')}}" alt="logo" />
+                        <img src="{{asset('images/helikon_logo3.png')}}" alt="logo" />
                     </a>
                 </div>
                 <nav class='col-sm-8 navbar-right'>
                     <ul class="menu">
                         <li>
                             <a href="/">
-                                Home
+                                Начало
                             </a>
                         </li>
                         <li>
                             <a href="/portfolio">
-                                Portfolio
+                                Портфолио
                             </a>
                         </li>
                         <li>
                             <a href="/login">
-                                Login
+                                Вход
                             </a>
                         </li>
                         <li>
                             <a href="blog">
-                                Register
+                                Регистрация
                             </a>
                         </li>
                         <li>
                             <a href="/contact">
-                                Contacts
+                                Контакти
                             </a>
                         </li>
                     </ul>
