@@ -8837,7 +8837,10 @@ a {
     background:0 0
 }
 main{
+    float: left;
+    width:100%;
     height:100%;
+    background: #262626;
 }
 
 .homepage{
@@ -8908,9 +8911,15 @@ main{
 }
 .login-widget{
     max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 50px;
+    bottom: 0;
+    height:400px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    border:4px solid #39ADB4;
 }
 .login-widget .square{
     width: 18px;
@@ -8986,6 +8995,31 @@ input[type="radio"]:checked + label span {
 }
 .blue-button:hover {background-color: #2A858B;}
 
+/*
+.login-page main{
+    background-image: url('/images/slider_background.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}*/
+
+.login-page main::before{
+    background-image: url('/images/slider_background.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: block;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    width:100%;
+    height:100%;
+}
 
 /*# sourceMappingURL=app.css.map */
 

@@ -1,6 +1,6 @@
 @extends('front.layout')
 
-@section('body-class', 'homepage')
+@section('body-class', 'login-page')
 
 @section('content')
 <div class="login-container login-widget white-bg">
