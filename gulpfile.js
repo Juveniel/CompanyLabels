@@ -23,7 +23,16 @@ elixir(function(mix) {
     ], 'public/output/front.css', 'public/css');
 
     //mix sass
-    mix.sass('app.scss');
+    mix.sass('admin.scss', 'public/css');
+
+    mix.styles([
+        'fonts.css',
+        'font-awesome.min.css',
+        'bootstrap.css',
+        'admin.css',
+        'dataTables.bootstrap.css',
+        'backend.css'
+    ], 'public/output/backend.css', 'public/css');
 
     //mix scripts
     mix.scripts([
@@ -34,5 +43,15 @@ elixir(function(mix) {
         'front_main.js'
     ], 'public/output/front.js', 'public/js');
 
-    mix.version(["public/output/front.css", "public/output/front.js"]);
+    mix.scripts([
+        'jquery.js',
+        'jquery-ui.js',
+        'bootstrap.js',
+        'jquery.dataTables.js',
+        'dataTables.bootstrap.js',
+        'jquery.sessionTimeout.js',
+        'backend_main.js'
+    ], 'public/output/backend.js', 'public/js');
+
+    mix.version(["public/output/front.css", "public/output/front.js", "public/output/backend.css", "public/output/backend.js"]);
 });

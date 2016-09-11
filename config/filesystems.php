@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 return [
 
@@ -52,6 +52,11 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'visibility' => 'public',
+        ],
+
+        'avatars' => [
+            'driver' => 'local',
+            'root'   => public_path('images/users/avatars/'),
         ],
 
         's3' => [

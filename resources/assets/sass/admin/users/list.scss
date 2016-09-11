@@ -1,0 +1,63 @@
+#user-list-tb_filter{
+  float: right;
+}
+#user-list-tb_wrapper .row:first-child{
+  margin-bottom:20px;
+}
+#user-list-tb_paginate .pagination{
+  float: right;
+  margin-top:0;
+}
+
+#user-list-tb thead th {
+  position: relative;
+  background-image: none !important;
+}
+
+#user-list-tb thead th.sorting:after,
+#user-list-tb thead th.sorting_asc:after,
+#user-list-tb thead th.sorting_desc:after {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  display: block;
+  font-family: FontAwesome;
+}
+
+#user-list-tb thead th.sorting:after {
+  content: "\f0dc";
+  color: #ddd;
+  font-size: 0.8em;
+  padding-top: 0.12em;
+}
+#user-list-tb thead th.sorting_asc:after {
+  content: "\f0de";
+}
+#user-list-tb thead th.sorting_desc:after {
+  content: "\f0dd";
+}
+
+#user-list .panel-heading{
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+#user-list .pagination > .active a{
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+#user-list #user-list-tb_filter input{
+  margin-left:5px;
+}
+#user-list-tb .options a{
+  float: left;
+  position: relative;
+  width: 33.33%;
+}
+#user-list-tb .options a i{
+  float: none;
+  margin:0 auto;
+  display: block;
+}
+#user-list .panel{
+  border-color: $primaryColor;
+}

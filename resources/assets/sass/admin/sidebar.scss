@@ -1,0 +1,287 @@
+.portfolio-sidebar {
+  width: 300px;
+  background: #23272d none repeat scroll 0% 0%;
+  float: left;
+  position: relative;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #13895F;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  position: absolute;
+  left: 25px;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.portfolio-header { margin: 25px 30px; height:25px; }
+.portfolio-header h1 {
+  color: white;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  margin: 0 5px;
+  vertical-align: middle;
+  float: left;
+  position: relative;
+  width: 98%;
+  margin-left: 30px;
+}
+.portfolio-header .user-settings{
+  float: left;
+  position: relative;
+  width:100%;
+  list-style: none;
+  margin-top:10px;
+}
+.portfolio-header .user-settings li{
+  float: left;
+  position: relative;
+  width:20%;
+}
+.portfolio-header .user-settings li a{
+  color:#e9e9ea;
+  display: block;
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  line-height: 23px;
+  transition: all 300ms ease-in-out;
+}
+.portfolio-header .user-settings li a:hover{
+  cursor: pointer;
+  background: #13895F;
+}
+
+.profile-photo-container { position: relative; float: left;width:100%; z-index: 5;}
+.profile-photo-overlay {
+  background-color: rgba(4, 152, 114, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.profile-photo-overlay:hover { background-color: rgba(4, 152, 114, 0); }
+
+/* Search form */
+.sidebar-search{
+  float:left;
+  position:relative;
+  width:100%;
+}
+.search-form {
+  font-size: 1.1em;
+  margin: 20px 20px;
+}
+.search-form .input-group { width: 100%; }
+.search-form .input-group .form-control {
+  background-color: #18191b;
+  border: none;
+  border-radius: 10px;
+  color: #DDD;
+  padding-left: 30px;
+}
+.form-control:focus {
+  border-color: #13895F;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(19,137,95,.075),0 0 8px rgba(19,137,95,.6);
+}
+.form-control.highlight {
+  background-color: #39ADB4;
+  color: white;
+}
+.form-control.highlight::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #ccc;
+}
+.form-control.highlight:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #ccc;
+  opacity:  1;
+}
+.form-control.highlight::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #ccc;
+  opacity:  1;
+}
+.form-control.highlight:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #ccc;
+}
+.search-form .input-group { position: relative; }
+.fa-search {
+  height:32px;
+  width:32px;
+  border: none;
+  cursor: pointer;
+  color:white;
+  background:transparent;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#navbar-menu .sub-menu{
+  list-style: outside none none;
+  margin: 0px;
+  padding: 0px;
+  background: #2a2e36;
+}
+#navbar-menu .sub-menu li:hover a{
+  background: none !important;
+  border-left:none !important;
+}
+#navbar-menu .sub-menu li a{
+  border-left:none !important;
+  padding-left:35px;
+  font-size: 13px;
+  text-decoration: none;
+  color:#808b9c;
+}
+#navbar-menu .sub-menu li a i{
+  margin-right:5px;
+}
+#navbar-menu .sub-menu li a:hover,
+#navbar-menu .sub-menu li a:hover i{
+  color:#fff;
+}
+#navbar-menu .sub-menu li.active{
+  border-left:none !important;
+}
+
+#navbar-menu li.active.dropdown{
+  border-left:none;
+}
+/*
+#navbar-menu li.active.dropdown a{
+  border-left: 8px solid #13895F;
+}*/
+#navbar-menu li { font-weight: 300;outline:none }
+#navbar-menu a.active,
+#navbar-menu a:hover {
+  background: #18191b !important;
+  border-left: 8px solid #13895F;
+  color:#fff;
+}
+#navbar-menu a {
+  color: #e9e9ea;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+#navbar-menu .fa { margin-right: 15px; }
+#navbar-menu li a{outline:none;}
+#navbar-menu  li.active{
+  background: #18191b !important;
+  border-left: 8px solid #13895F;
+}
+#navbar-menu li.active a{
+  background: none;
+}
+#navbar-menu li.active:hover{
+  border-left:none;
+}
+#navbar-menu li.active.collapsed{
+  background: #23272d !important;
+  border-left: none !important;
+}
+#navbar-menu .dropdown.active.collapsed{
+  border-left: none !important;
+}
+
+#navbar-menu li.dropdown > a::before{
+  position: relative;
+  font-family: FontAwesome;
+  content: "\f054";
+  display: inline-block;
+  color: #FFF;
+  float: right;
+  font-size: 10px;
+  margin-left: 13px;
+  top: 0px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+#navbar-menu li.dropdown.active > a::before{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#navbar-menu li.dropdown.active.collapsed > a::before{
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#navbar-menu li.dropdown{
+  cursor: inherit;
+}
+#navbar-menu li.dropdown.active a{
+  border-left: 8px solid #13895F;
+}
+
+
+
+.portfolio-nav{
+  float: left;
+  position: relative;
+  width:100%;
+}
+.sidebar-search .input-group-addon{
+  padding:0;
+  background:#18191B;
+  right: -12px;
+  position: relative;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right:1px solid #dddddd;
+  z-index: 9;
+}
+.sidebar-search i{
+  float: left;
+  position:relative;
+  height:32px;
+  line-height: 32px;
+}
+.portfolio-nav{
+  background: #23272d none repeat scroll 0% 0%;
+  border:none;
+  outline: none;
+  border-top:1px solid #e9e9ea;
+  margin-top:10px;
+}
+.portfolio-nav .container-fluid{
+  padding:0;
+}
+.portfolio-nav #navbar-menu{
+  float: left;
+  position:relative;
+  width:100%;
+  padding:0;
+}
+#navbar-menu ul{
+  width:100%;
+  float: left;
+  position: relative;
+}
+#navbar-menu ul li{
+  float: left;
+  position:relative;
+  width:100%;
+}
+#navbar-menu ul .heading h4{
+  color: #fff;
+  padding:0 15px;
+}

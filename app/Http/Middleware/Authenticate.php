@@ -21,7 +21,17 @@ class Authenticate
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('login');
+                $requesturi = $request->getRequestUri();
+
+                if(strpos($requesturi, 'company') !== false){
+                    return redirect()->guest('/login');
+                }
+                else if(strpos($requesturi, 'admin') !== false) {
+                    return redirect()->guest('/admin');
+                }
+                else{
+                    return redirect()->guest('/');
+                }
             }
         }
 

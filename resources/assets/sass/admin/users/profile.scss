@@ -1,0 +1,82 @@
+#user-profile .mbl{
+  float: left;
+  position: relative;
+  width:100%;
+}
+#user-profile .mbl img{
+  width: 150px;
+  max-height: 115px;
+}
+#user-profile .profile-data{
+  float: left;
+  position: relative;
+  width:100%;
+}
+#user-profile .profile-data h2{
+  float: left;
+  position: relative;
+  width:100%;
+  text-align: center;
+}
+#user-profile .profile-data .email{
+  text-align: center;
+  float: left;
+  position: relative;
+  width:100%;
+}
+#user-profile .social-data{
+  float:left;
+  position: relative;
+  width:100%;
+  margin-top:20px;
+}
+#user-profile .social-data .wrapper{
+  float: none;
+  margin: 0px auto;
+  width: 170px;
+}
+#user-profile .social-data a{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  line-height:25px;
+  float: left;
+  margin-right: 10px;
+}
+#user-profile .social-data a:last-child{
+  margin-right:0;
+}
+#user-profile .social-data .fb{
+  background: #3b5998;
+  color:#fff;
+}
+#user-profile .social-data .gp{
+  background: #de4b39;
+  color:#fff;
+}
+#user-profile .social-data .li{
+  background: #007bb6;
+  color:#fff;
+}
+#user-profile .social-data .so{
+  background: #f9a32c;
+  color:#fff;
+}
+#user-profile table{
+  border-bottom: 1px solid #ddd;
+}
+#user-profile .panel{
+  border:none;
+}
+#user-profile .panel-heading{
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+#user-profile .panel .text-primary{
+  color:$primaryColor;
+}
+
+

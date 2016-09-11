@@ -1,11 +1,11 @@
-@extends('front.layout')
+@extends('backend.layout')
 
-@section('body-class', 'login-page')
+@section('class', 'login-page')
 
 @section('content')
 <div class="login-container login-widget white-bg">
     <header>
-        <h1>Корпоративен вход</h1>
+        <h1>Вход</h1>
     </header>
 
     @if (count($errors) > 0)
@@ -27,16 +27,6 @@
             <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
                 {!! Form::password('password', ['placeholder' => 'Парола', 'class' => 'form-control']) !!}
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="checkbox squaredTwo">
-                <input type="checkbox" id="c1" name="remember" />
-                <label for="c1">
-                    <span></span>
-                    Запомни ме
-                </label>
             </div>
         </div>
 

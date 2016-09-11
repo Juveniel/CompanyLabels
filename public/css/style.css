@@ -220,7 +220,8 @@ main{
     max-width: 450px;
     padding: 50px;
     bottom: 0;
-    height:400px;
+   /* height:400px;*/
+    max-height: 420px;
     left: 0;
     position: absolute;
     top: 0;

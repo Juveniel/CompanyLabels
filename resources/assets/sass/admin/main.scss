@@ -1,0 +1,236 @@
+$primaryColor: #13895F;
+$primaryHoverColor: #15C387;
+
+@mixin easeInOutEff{
+  -webkit-transition: .2s ease-in-out;
+  -o-transition:  .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+/* Wrappers */
+body{
+  background: #1F2124 none repeat scroll 0% 0%;
+}
+#portfolio-page{
+  display: flex;
+}
+
+#portfolio-page .portfolio-content{
+  //flex: 1 1 0%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #EFEFEF;
+  margin-top: 0px;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding:10px;
+}
+/* Header */
+.content-header h1 {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+
+/* Breadcrumbs */
+.content-header > .breadcrumb {
+  margin-top: 8px;
+  box-shadow: none;
+  margin-bottom: 25px;
+  border: 0px !important;
+  background-color: #fff !important;
+  border-radius: 0px;
+  list-style: none;
+  padding: 8px 15px 8px 35px;;
+}
+.content-header > .breadcrumb > li {
+  color: #000;
+  text-decoration: none;
+}
+.content-header > .breadcrumb > li > a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.content-header > .home-icon{
+  position: relative;
+  top: 34px;
+  margin-left: 3px;
+  color: #13895F;
+}
+.content-header > .breadcrumb > li:hover a{
+  color: #13895F;
+  text-decoration: underline;
+}
+.content-header .breadcrumb > li + li::before {
+  color: #13895F;
+}
+
+
+.ui-widget {
+  font-family: Verdana,Arial,sans-serif;
+  font-size: .8em;
+}
+
+.ui-widget-content {
+  background: #F9F9F9 !important;
+  border: 1px solid $primaryColor !important;
+  color: #222222 !important;
+}
+
+.ui-dialog {
+}
+.ui-dialog .ui-dialog-content {
+  background: none repeat scroll 0 0 transparent !important;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.ui-widget-header {
+  background: $primaryColor !important;
+  border: 0 !important;
+  color: #fff !important;
+  font-weight: normal !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.1em .5em !important;
+  position: relative !important;
+  font-size: 1.5em !important;
+  text-align: center;
+}
+.ui-dialog-buttonset button{
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background: $primaryColor;
+  &:hover {
+    background: $primaryHoverColor;
+  }
+  @include easeInOutEff;
+  border:1px solid transparent;
+  color:#fff;
+  margin:5px 15px;
+}
+.ui-dialog-buttonset button:first-child{
+  margin-right:114px;
+}
+.ui-widget-overlay{
+  float: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+  z-index: 10;
+}
+.ui-dialog{
+  z-index: 20;
+}
+
+.collapseTrigger i{
+  color:#fff;
+  outline:none;
+}
+
+/* Override primary panel colors */
+.panel-primary > .panel-heading{
+  background: $primaryColor;
+  border-color: $primaryColor;
+}
+.panel-primary{
+  border-color: $primaryColor;
+}
+.panel-primary .section-title{
+  color:$primaryColor;
+}
+.panel-primary .form-group{
+  float: left;
+  position: relative;
+  width:100%;
+}
+.panel-primary .btn-primary{
+  background: $primaryColor;
+  &:hover {
+    background: $primaryHoverColor;
+  }
+  @include easeInOutEff;
+  border:1px solid transparent;
+}
+.panel-primary .control-label{
+  padding-top: 7px;
+  margin-bottom: 0;
+  text-align: right;
+}
+#collapseSiteSettings .control-label{
+  padding-left:0;
+  padding-right:0;
+}
+
+//Override primary pagination colors
+th.sorting:after,
+th.sorting_asc:after,
+th.sorting_desc:after {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  display: block;
+  font-family: FontAwesome !important;
+  opacity: 1 !important;
+}
+
+th.sorting:after {
+  content: "\f0dc" !important;
+  color: $primaryColor !important;
+  font-size: 0.8em;
+  padding-top: 0.12em;
+}
+th.sorting_asc:after {
+  content: "\f0de" !important;
+  color: $primaryColor !important;
+}
+th.sorting_desc:after {
+  content: "\f0dd" !important;
+  color: $primaryColor !important;
+}
+.pagination > li > a{
+  color: $primaryColor
+}
+.pagination > .active > a:focus{
+  background-color: $primaryColor !important;
+  border-color: $primaryColor !important;
+}
+.pagination > .active a,
+.pagination > .active a:hover{
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+
+/* Logs */
+#logs-list .list-group-item{
+  padding:6px 15px;
+  margin-bottom:10px;
+}
+#logs-list .btn-sc{
+  float: right;
+  position: relative;
+  top: -43px;
+}
