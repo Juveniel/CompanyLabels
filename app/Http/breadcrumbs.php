@@ -63,7 +63,7 @@ Breadcrumbs::register('companies', function($breadcrumbs)
 });
 
 // Home > Companies > Profile
-Breadcrumbs::register('Company profile', function($breadcrumbs, $company)
+Breadcrumbs::register('company-profile', function($breadcrumbs, $company)
 {
     $breadcrumbs->parent('companies');
     $breadcrumbs->push('Company Profile', route('companyProfile', $company->id));

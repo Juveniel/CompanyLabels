@@ -831,4 +831,35 @@ input[type="radio"]:checked + label span {
 #user-list .panel {
   border-color: #13895F; }
 
+#company-create .fileinput-upl input {
+  overflow: hidden;
+  opacity: 0;
+  padding: 5px 0px;
+  cursor: pointer; }
+
+#company-create .fileinput-upl span {
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+  transition: .2s ease-in-out;
+  border: 1px solid transparent; }
+  #company-create .fileinput-upl span:hover {
+    background: #15C387 !important; }
+
+#company-create #avatar-holder {
+  width: 200px;
+  height: 150px; }
+
+#company-create .fileinput-thumbnail {
+  display: inline-block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px; }
+
 /*# sourceMappingURL=admin.css.map */

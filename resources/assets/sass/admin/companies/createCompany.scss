@@ -1,10 +1,10 @@
-#user-create .fileinput-upl input{
+#company-create .fileinput-upl input{
   overflow: hidden;
   opacity:0;
   padding: 5px 0px;
   cursor: pointer;
 }
-#user-create .fileinput-upl span{
+#company-create .fileinput-upl span{
   position: absolute;
   bottom: 0px;
   pointer-events: none;
@@ -14,7 +14,19 @@
   @include easeInOutEff;
   border:1px solid transparent;
 }
-#user-create #avatar-holder{
+#company-create #avatar-holder{
   width:200px;
   height:150px;
+}
+#company-create .fileinput-thumbnail{
+  display: inline-block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
 }

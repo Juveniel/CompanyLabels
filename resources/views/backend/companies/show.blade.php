@@ -5,7 +5,7 @@
 <section class='content-header'>
     <h1>Company Profile</h1>
     <i class="fa fa-home fa-fw fa-lg home-icon"></i>
-    {!! Breadcrumbs::render('Company Profile', Auth::user()) !!}
+    {!! Breadcrumbs::render('company-profile', Auth::user()) !!}
 </section>
 
 <section class='content-data' id='company-profile'>
