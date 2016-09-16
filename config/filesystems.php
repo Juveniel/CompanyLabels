@@ -59,6 +59,11 @@ return [
             'root'   => public_path('images/users/avatars/'),
         ],
 
+        'companies' => [
+            'driver' => 'local',
+            'root' => public_path('images/companies/'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => 'your-key',

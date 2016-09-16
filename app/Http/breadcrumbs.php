@@ -54,3 +54,31 @@ Breadcrumbs::register('access-log', function($breadcrumbs)
     $breadcrumbs->parent('logs');
     $breadcrumbs->push('Access Log', route('access-log'));
 });
+
+// Home > Companies
+Breadcrumbs::register('companies', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Companies', route('companies'));
+});
+
+// Home > Companies > Profile
+Breadcrumbs::register('Company profile', function($breadcrumbs, $company)
+{
+    $breadcrumbs->parent('companies');
+    $breadcrumbs->push('Company Profile', route('companyProfile', $company->id));
+});
+
+// Home > Companies > Create
+Breadcrumbs::register('company-create', function($breadcrumbs, $user)
+{
+    $breadcrumbs->parent('companies');
+        $breadcrumbs->push('Create Company', route('create', $user));
+});
+
+// Home > Companies > Edit
+Breadcrumbs::register('company-edit', function($breadcrumbs, $user)
+{
+    $breadcrumbs->parent('companies');
+    $breadcrumbs->push('Update Company', route('user-edit', $user));
+});

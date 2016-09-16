@@ -20,6 +20,10 @@ class CreateCompanyTable extends Migration
             $table->string('bulstat')->nullable();
             $table->string('mol')->nullable();
             $table->string('description')->nullable();
+            $table->string('logo');
+            $table->string('facebook');
+            $table->string('linked_in');
+            $table->string('google_plus');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -1,0 +1,20 @@
+#user-create .fileinput-upl input{
+  overflow: hidden;
+  opacity:0;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+#user-create .fileinput-upl span{
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+  &:hover {
+    background: $primaryHoverColor !important;
+  }
+  @include easeInOutEff;
+  border:1px solid transparent;
+}
+#user-create #avatar-holder{
+  width:200px;
+  height:150px;
+}

@@ -72,6 +72,13 @@
 
         Route::get('/admin/lockscreen', ['as' => 'lockscreen', 'uses' => 'AdminUsersController@lock_screen', function () {}]);
 
+        # Company
+        Route::get('/admin/companies', ['as' => 'companies', 'uses' => 'CompaniesController@index', function() {}]);
+        Route::get('admin/companies/create', ['as' => 'create', 'uses' => 'CompaniesController@create', function () {}]);
+        Route::post('admin/companies/create', ['as' => 'create ', 'uses' => 'CompaniesController@store', function () {}]);
+        Route::get('admin/companies/{id?}', ['as' => 'companyProfile', 'uses' => 'CompaniesController@show', function ($id = null) {}]);
+
+
         # Settings
         Route::get('/admin/settings', ['as' => 'settings', 'uses' => 'SettingsController@edit', function () {}]);
         Route::patch('/admin/settings', ['as' => 'settings', 'uses' => 'SettingsController@update', function () {}]);
