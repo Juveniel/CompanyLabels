@@ -53,6 +53,10 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
+                                        <td class="text-primary">Company:</td>
+                                        <td>{{$userData['company'] or ''}}</td>
+                                    </tr>
+                                    <tr>
                                         <td class="text-primary">Email:</td>
                                         <td>{{$userData['email'] or ''}}</td>
                                     </tr>

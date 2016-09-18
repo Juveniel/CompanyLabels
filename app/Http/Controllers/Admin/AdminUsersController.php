@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\City;
+use App\Models\Company;
 use App\Models\Country;
 use App\Models\Role;
 use App\Models\User;
@@ -50,7 +51,11 @@ class AdminUsersController extends Controller
         $countries = Country::orderBy('name', 'ASC')->lists('name', 'id');
         $countries->prepend("--- Choose a country ---", -1);
 
-        return view('backend.users.create', ['countries' => $countries, 'roles' => $roles]);
+        //get companies select
+        $companies = Company::orderBy('name', 'ASC')->lists('name', 'id');
+        $companies->prepend("--- Choose a company ---", -1);
+
+        return view('backend.users.create', ['countries' => $countries, 'roles' => $roles, 'companies' => $companies]);
     }
 
     /**
@@ -91,7 +96,8 @@ class AdminUsersController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:3|confirmed',
             'password_confirmation' => 'required|min:3',
-            'user_role' => 'required|not_in:-1'
+            'user_role' => 'required|not_in:-1',
+            'user_company' => 'required|not_in:-1'
         ]);
 
         $country = '';
@@ -119,9 +125,12 @@ class AdminUsersController extends Controller
 
         $user->save();
 
-        //attack role to the new user
+        //attach role to the new user
         $new_user = User::find($user->id);
         $new_user->assignRole(e($request->user_role));
+
+        //attach company to the user
+        $new_user->assignCompany(e($request->user_company));
 
         //add user avatar
         if ($request->hasFile('avatar'))
@@ -179,7 +188,8 @@ class AdminUsersController extends Controller
                 'avatar' => $User->getAvatarImage(),
                 'facebook' => $User->facebook,
                 'linkedIn' => $User->linked_in,
-                'googlePlus' => $User->google_plus
+                'googlePlus' => $User->google_plus,
+                'company' => $User->getCompanyName()
             ];
 
         }catch (\Exception $e){

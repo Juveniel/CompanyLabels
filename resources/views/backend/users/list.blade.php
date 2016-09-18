@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <section class='content-header'>
     <h1>User List</h1>
     <i class="fa fa-home fa-fw fa-lg home-icon"></i>
@@ -40,10 +41,12 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
+                                                <th>Company</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>User E-mail</th>
                                                 <th>Country</th>
+                                                <th>City</th>
                                                 <th>Created At</th>
                                                 <th>Options</th>
                                             </tr>
@@ -53,10 +56,12 @@
                                             @foreach ($users as $user)
                                                 <tr>
                                                     <td>{{$user->id}}</td>
+                                                    <td>{{$user->getCompanyName()}}</td>
                                                     <td>{{$user->first_name}}</td>
                                                     <td>{{$user->last_name}}</td>
                                                     <td>{{$user->email}}</td>
                                                     <td>{{$user->country}}</td>
+                                                    <td>{{$user->city}}</td>
                                                     <td>{{$user->created_at->diffForHumans()}}</td>
                                                     <td class="options">
 

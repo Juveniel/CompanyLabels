@@ -94,6 +94,15 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">User company<span class="text-danger rq">*</span></label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            {!! Form::select('user_company', $companies, array(), array('id' => 'sl_company','class' => 'form-control')) !!}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="section-title"><h3>Personal Information</h3></div>
 
                                 <div class="form-group">

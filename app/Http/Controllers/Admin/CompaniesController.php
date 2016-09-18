@@ -122,8 +122,11 @@ class CompaniesController extends Controller
                 'logoPath' => $Company->logo,
                 'facebook' => $Company->facebook,
                 'linkedIn' => $Company->linked_in,
-                'googlePlus' => $Company->google_plus
+                'googlePlus' => $Company->google_plus,
+                'companyUsers' => $Company->users
             ];
+
+            $companyUsers = $Company->users();
 
         }catch (\Exception $e){
             $companyData = [

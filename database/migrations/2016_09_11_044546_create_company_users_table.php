@@ -12,7 +12,7 @@ class CreateCompanyUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('company_users', function (Blueprint $table) {
+        Schema::create('company_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -29,6 +29,6 @@ class CreateCompanyUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_users');
+        Schema::drop('company_user');
     }
 }

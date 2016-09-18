@@ -73,6 +73,34 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="company-users">
+                    <table  id="company-list-tb" class="table dataTable table-striped table-bordered no-footer" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Company name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Bulstat</th>
+                            <th>MOL</th>
+                            <th>Created At</th>
+                            <th>Options</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        @foreach ($companyData['companyUsers'] as $user)
+                            <tr>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->first_name}}</td>
+                                <td>{{$user->last_name}}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

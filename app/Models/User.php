@@ -37,6 +37,11 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Role')->withTimestamps();
     }
 
+    public function companies()
+    {
+        return $this->belongsToMany('App\Models\Company')->withTimestamps();
+    }
+
     /**
      * Does the user have a particular role?
      *
@@ -64,6 +69,18 @@ class User extends Authenticatable
         return $name;
     }
 
+    public function getCompanyName(){
+        $name = '';
+
+        if(count($this->companies()) > 0){
+            foreach($this->companies as $company){
+                $name = $company->name;
+            }
+        }
+
+        return $name;
+    }
+
 
     /**
      * Assign a role to the user
@@ -84,6 +101,17 @@ class User extends Authenticatable
     public function removeRole($role)
     {
         return $this->roles()->detach($role);
+    }
+
+    /**
+     * Assign a company to the user
+     *
+     * @param $company
+     * @return mixed
+     */
+    public function assignCompany($company)
+    {
+        return $this->companies()->attach($company);
     }
 
     /**
