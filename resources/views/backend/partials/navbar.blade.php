@@ -59,6 +59,28 @@
             </ul>
         </li>
 
+        <li @if (Request::is('admin/labels*')) class="dropdown active" @endif class="dropdown" data-toggle="collapse" href="#labels-mod-sub">
+            <a >
+                <i class="fa fa-braille fa-fw"></i>
+                Label Templates
+                <span class="epxpand-triger"></span>
+            </a>
+            <ul @if (Request::is('admin/labels*')) class="sub-menu collapse in" @endif id="labels-mod-sub"  class="sub-menu collapse" >
+                <li>
+                    <a  href="/admin/labels">
+                        <i class="fa fa-list fa-fw"></i>
+                        List
+                    </a>
+                </li>
+                <li>
+                    <a   href="/admin/labels/create">
+                        <i class="fa fa-user-plus fa-fw"></i>
+                        Add label template
+                    </a>
+                </li>
+            </ul>
+        </li>
+
         <li>
             <a href="/admin/settings">
                 <i class="fa fa-cog fa-fw"></i>

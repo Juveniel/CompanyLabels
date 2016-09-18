@@ -78,5 +78,11 @@
 #company-profile   .panel .text-primary{
   color:$primaryColor;
 }
-
+#company-users-list h4,
+#company-info-list h4{
+  color:$primaryColor;
+}
+#company-users-list{
+  float: right;
+}
 

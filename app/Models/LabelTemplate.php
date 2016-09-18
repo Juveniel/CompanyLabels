@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 
-class Company extends Model
+class LabelTemplate extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -13,7 +13,7 @@ class Company extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'address', 'bulstat', 'mol', 'description'
+        'title', 'description', 'path'
     ];
 
     /**
@@ -32,26 +32,23 @@ class Company extends Model
      */
     protected $dates = ['deleted_at'];
 
-    public function users() {
-        return $this->belongsToMany('App\Models\User');
-    }
-
-    public function labels() {
-        return $this->belongsToMany('App\Models\LabelTemplate');
+    public function companies()
+    {
+        return $this->belongsToMany('App\Models\Company')->withTimestamps();
     }
 
     /**
      * Get company logo
      *
      */
-    public function getLogoImage()
+    public function getTemplateImage()
     {
-        $storage_path = public_path('/images/companies/logo/'.$this->id.'/');
+        $storage_path = public_path('/images/labelTemplates/'.$this->id.'/');
 
-        if(!empty($this->logo) && File::exists($storage_path.$this->logo))
+        if(!empty($this->path) && File::exists($storage_path.$this->path))
         {
             // Get the filename from the full path
-            $filePath = '/images/companies/logo/'.$this->id.'/'.$this->logo;
+            $filePath = '/images/labelTemplates/'.$this->id.'/'.$this->path;
 
             return $filePath;
         }

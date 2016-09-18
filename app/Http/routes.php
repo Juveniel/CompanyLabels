@@ -77,6 +77,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth','auth.role:admin']
     Route::get('admin/companies/edit/{id?}', ['as' => 'company-edit', 'uses' => 'CompaniesController@edit', function ($id = null) {}]);
     Route::patch('admin/companies/edit/{id?}', ['as' => 'company-edit', 'uses' => 'CompaniesController@update', function ($id = null) {}]);
 
+    # Label Templates
+    Route::get('/admin/labels', ['as' => 'labels', 'uses' => 'LabelTemplatesController@index', function() {}]);
+    Route::get('admin/labels/create', ['as' => 'create', 'uses' => 'LabelTemplatesController@create', function () {}]);
+    Route::post('admin/labels/create', ['as' => 'create ', 'uses' => 'LabelTemplatesController@store', function () {}]);
 
     # Settings
     Route::get('/admin/settings', ['as' => 'settings', 'uses' => 'SettingsController@edit', function () {}]);

@@ -82,3 +82,16 @@ Breadcrumbs::register('company-edit', function($breadcrumbs, $company)
     $breadcrumbs->parent('companies');
     $breadcrumbs->push('Update Company', route('user-edit', $company));
 });
+
+// Home > Labels
+Breadcrumbs::register('label-templates', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Label Templates', route('labels'));
+});
+// Home > Labels > Create
+Breadcrumbs::register('label-create', function($breadcrumbs, $company)
+{
+    $breadcrumbs->parent('label-templates');
+    $breadcrumbs->push('Attach Label Template', route('create', $company));
+});

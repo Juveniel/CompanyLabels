@@ -1,0 +1,21 @@
+#templates-list-tb-wrapp .image img{
+  float: none;
+  margin: 0 auto;
+  display: block;
+  max-width:100%;
+}
+#templates-list-tb-wrapp .title{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+#templates-list-tb-wrapp .description{
+  float: left;
+  position: relative;
+  text-align: justify;
+}
+#templates-list-tb-wrapp .col{
+  margin-bottom:20px;
+}

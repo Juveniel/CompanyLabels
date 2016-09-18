@@ -64,6 +64,11 @@ return [
             'root' => public_path('images/companies/logo'),
         ],
 
+        'labelTemplates' => [
+            'driver' => 'local',
+            'root' => public_path('images/labelTemplates'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => 'your-key',

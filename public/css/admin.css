@@ -876,7 +876,7 @@ input[type="radio"]:checked + label span {
   width: 100%; }
 
 #company-profile .mbl img {
-  width: 150px;
+  width: 100%;
   max-height: 115px; }
 
 #company-profile .profile-data {
@@ -949,5 +949,69 @@ input[type="radio"]:checked + label span {
 
 #company-profile .panel .text-primary {
   color: #13895F; }
+
+#company-users-list h4,
+#company-info-list h4 {
+  color: #13895F; }
+
+#company-users-list {
+  float: right; }
+
+#label-template-create .fileinput-upl input,
+#label-template-update .fileinput-upl input {
+  overflow: hidden;
+  opacity: 0;
+  padding: 5px 0px;
+  cursor: pointer; }
+
+#label-template-create .fileinput-upl span,
+#label-template-update .fileinput-upl span {
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+  transition: .2s ease-in-out;
+  border: 1px solid transparent; }
+  #label-template-create .fileinput-upl span:hover,
+  #label-template-update .fileinput-upl span:hover {
+    background: #15C387 !important; }
+
+#label-template-create #avatar-holder,
+#label-template-update#label-template-create #avatar-holder {
+  width: 200px;
+  height: 150px; }
+
+#label-template-create .fileinput-thumbnail,
+#label-template-update#label-template-create .fileinput-thumbnail {
+  display: inline-block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px; }
+
+#templates-list-tb-wrapp .image img {
+  float: none;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%; }
+
+#templates-list-tb-wrapp .title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0; }
+
+#templates-list-tb-wrapp .description {
+  float: left;
+  position: relative;
+  text-align: justify; }
+
+#templates-list-tb-wrapp .col {
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=admin.css.map */
