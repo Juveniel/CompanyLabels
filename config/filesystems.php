@@ -61,7 +61,7 @@ return [
 
         'companies' => [
             'driver' => 'local',
-            'root' => public_path('images/companies/'),
+            'root' => public_path('images/companies/logo'),
         ],
 
         's3' => [

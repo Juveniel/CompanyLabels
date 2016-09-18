@@ -78,6 +78,40 @@ $(document).ready(function(){
         }
     });
 
+    //preview company logo todo separate in fuynction
+    $("#logo-upl").on('change', function () {
+
+        //Get count of selected files
+        var countFiles = $(this)[0].files.length;
+
+        var imgPath = $(this)[0].value;
+        var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+        var image_holder = $("#logo-holder");
+        image_holder.empty();
+
+        if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+            if (typeof (FileReader) != "undefined") {
+
+                //loop for each file selected for uploaded.
+                for (var i = 0; i < countFiles; i++) {
+
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        image_holder.attr('src', e.target.result);
+                    };
+
+                    image_holder.show();
+                    reader.readAsDataURL($(this)[0].files[i]);
+                }
+
+            } else {
+                $('#logoFileReaderNS').modal('show');
+            }
+        } else {
+            $('#logoFileTypeModal').modal('show');
+        }
+    });
+
     //Create user populate cities select
     $('#sl_country').change(function()
     {
@@ -90,6 +124,7 @@ $(document).ready(function(){
             dataType: "json",
             async: true,
             success: function (data) {
+                console.dir(data);
                 var $cities_select = $('#sl_city');
 
                 $cities_select.empty();

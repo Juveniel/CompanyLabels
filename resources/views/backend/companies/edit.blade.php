@@ -2,26 +2,26 @@
 
 @section('content')
 
-    <section class='content-header'>
-        <h1>Update user record</h1>
+    <!--<section class='content-header'>
+        <h1>Update company record</h1>
         <i class="fa fa-home fa-fw fa-lg home-icon"></i>
-        {!! Breadcrumbs::render('user-edit', Auth::user()) !!}
-    </section>
+        {!! Breadcrumbs::render('company-edit', Auth::user()) !!}
+    </section> -->
 
-    <section class='content-data' id='user-create'>
+    <section class='content-data' id='company-update'>
         <div class='row'>
             <div class='col-md-12'>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             <i class="fa fa-user fa-fw"></i>
-                            Update User...
+                            Update Company...
                              <span class="pull-right">
-                                <a class="collapseTrigger" data-toggle="collapse" href="#collapseUserUpdate"></a>
+                                <a class="collapseTrigger" data-toggle="collapse" href="#collapseCompanyUpdate"></a>
                             </span>
                         </h3>
                     </div>
-                    <div id="collapseUserUpdate" class="panel-collapse collapse in">
+                    <div id="collapseCompanyUpdate" class="panel-collapse collapse in">
                         <div class="panel-body">
 
                             <div class="errors">
@@ -42,27 +42,37 @@
                                 </div>
                             @endif
 
-                            <div class="section-title"><h3>Account details for user: {{$user->username}}</h3></div>
-                            {!! Form::model($user, array('method' => 'patch', 'files' => true), ['id' => 'update-user-form', 'class' => 'cuf']) !!}
+                            <div class="section-title"><h3>Account details for company: {{$company->name}}</h3></div>
+                            {!! Form::model($company, array('method' => 'patch', 'files' => true), ['id' => 'update-company-form', 'class' => 'cuf']) !!}
 
-                            {!! Form::hidden('userId', $user->id, array('id' => 'user-id')) !!}
+                            {!! Form::hidden('companyId', $company->id, array('id' => 'company-id')) !!}
                             <div class="form-group">
-                                <label class="col-lg-2 control-label">Avatar<span class="text-danger rq">*</span></label>
+                                <label class="col-lg-2 control-label">Logo<span class="text-danger rq">*</span></label>
                                 <div class="fileinput col-lg-6">
                                     <div class="fileinput-thumbnail">
-                                        <img id="avatar-holder" src="
-                                            @if (!empty($user->getAvatarImage()))
-                                                {{$user->getAvatarImage()}}
+                                        <img id="logo-holder" src="
+                                            @if (!empty($company->getLogoImage()))
+                                                {{$company->getLogoImage()}}
                                             @else
                                                 '/images/200x150.png'
                                             @endif
                                         "/>
                                     </div>
                                     <div class="fileinput-upl">
-                                        {!! Form::file('avatar', array('id' => 'avatar-upl')) !!}
+                                        {!! Form::file('logo', array('id' => 'logo-upl')) !!}
                                         <span class="btn btn-primary btn-file">
-                                            Update Image
+                                            Update Logo
                                         </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Name</label>
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-building-o fa-fw"></i></div>
+                                        {!! Form::text('name', null, array('class' => 'form-control')) !!}
                                     </div>
                                 </div>
                             </div>
@@ -77,56 +87,45 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">User group<span class="text-danger rq">*</span></label>
-                                <div class="col-lg-6">
-                                    <div class="input-group">
-                                        {!! Form::select('user_role', $roles, $user->getRole(), array('id' => 'sl_roles','class' => 'form-control')) !!}
+                             <div class="form-group">
+                                    <label class="col-lg-2 control-label">Address<span class="text-danger rq">*</span></label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></div>
+                                            {!! Form::text('address', null, array('class' => 'form-control')) !!}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="section-title"><h3>Personal Information</h3></div>
-
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">First name</label>
-                                <div class="col-lg-6">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-user-md fa-fw"></i></div>
-                                        {!! Form::text('first_name', null, array('class' => 'form-control')) !!}
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Bulstat<span class="text-danger rq"></span></label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-ellipsis-h fa-fw"></i></div>
+                                            {!! Form::text('bulstat', null, array('class' => 'form-control')) !!}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">Last name</label>
-                                <div class="col-lg-6">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-user-md fa-fw"></i></div>
-                                        {!! Form::text('last_name', null, array('class' => 'form-control')) !!}
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">MOL<span class="text-danger rq"></span></label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                                            {!! Form::text('mol', null, array('class' => 'form-control')) !!}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">Country</label>
-                                <div class="col-lg-6">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-globe fa-fw"></i></div>
-                                        {!! Form::select('country', $countries, $user->country, array('id' => 'sl_country','class' => 'form-control')) !!}
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Description<span class="text-danger rq"></span></label>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-text-width fa-fw"></i></div>
+                                            {!! Form::textarea('description', null, array('class' => 'form-control')) !!}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">City</label>
-                                <div class="col-lg-6">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa fa-flag fa-fw"></i></div>
-                                        {!! Form::select('city', $cities, $user->city, array('id' => 'sl_city', 'class' => 'form-control'))!!}
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="section-title"><h3>Social accounts</h3></div>
 
@@ -161,7 +160,7 @@
                             </div>
 
                             <div class="col-lg-offset-2 col-lg-10">
-                                {!! Form::submit('Update', array('id' => 'create-user-btn', 'class' => 'btn btn-primary')) !!}
+                                {!! Form::submit('Update', array('id' => 'update-company-btn', 'class' => 'btn btn-primary')) !!}
                             </div>
 
                             {!! Form::close() !!}
@@ -174,7 +173,7 @@
     </section>
 
 
-    <div id="avatarFileTypeModal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="logoFileTypeModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -192,7 +191,7 @@
         </div>
     </div>
 
-    <div id="avatarFileReaderNS" class="modal fade" tabindex="-1" role="dialog">
+    <div id="logoFileReaderNS" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

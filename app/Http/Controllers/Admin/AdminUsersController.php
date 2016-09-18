@@ -274,7 +274,7 @@ class AdminUsersController extends Controller
                 $thumbnail_name = '200x150-'.$file->getClientOriginalName();
                 $thumbnail = new ImageResize(public_path('images/users/avatars/'.$image_name));
                 $thumbnail->resizeImage(200, 150, 'exact');
-                $thumbnail->saveImage(public_path('images/users/avatars/'.$user->id."/".$thumbnail_name, 100));
+                $thumbnail->saveImage(public_path('images/users/avatars/'.$user->id."/".$thumbnail_name));
 
                 //Remove original file form storage
                 Storage::disk('avatars')->delete($image_name);

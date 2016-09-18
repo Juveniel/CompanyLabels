@@ -5,7 +5,7 @@
 <section class='content-header'>
     <h1>Company Profile</h1>
     <i class="fa fa-home fa-fw fa-lg home-icon"></i>
-    {!! Breadcrumbs::render('company-profile', Auth::user()) !!}
+    {!! Breadcrumbs::render('company-profile', $companyData['id']) !!}
 </section>
 
 <section class='content-data' id='company-profile'>
@@ -15,7 +15,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <i class="fa fa-user fa-fw"></i>
-                        Company profile review...
+                        Company profile preview...
                         <span class="pull-right">
                             <a class="collapseTrigger" data-toggle="collapse" href="#collapseCompanyProfile"></a>
                         </span>

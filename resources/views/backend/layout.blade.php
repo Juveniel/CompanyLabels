@@ -11,6 +11,7 @@
     <meta name="title" content="Company Labels">
     <meta name="description" content="Company labels application">
     <meta name="keywords" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

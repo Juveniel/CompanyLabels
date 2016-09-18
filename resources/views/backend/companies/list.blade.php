@@ -67,9 +67,9 @@
                                                         <a href="/admin/companies/edit/{{$company->id}}" data-toggle="tooltip" title="Edit company" data-placement="bottom">
                                                             <i class="fa fa-fw fa-pencil text-warning"></i>
                                                         </a>
-                                                        <a href="/admin/companies/delete/{{$company->id}}" data-toggle="tooltip" title="Delete company" data-placement="bottom">
+                                                        <!--<a href="/admin/companies/delete/{{$company->id}}" data-toggle="tooltip" title="Delete company" data-placement="bottom">
                                                             <i class="fa fa-fw fa-times text-danger"></i>
-                                                        </a>
+                                                        </a>-->
                                                     </td>
                                                 </tr>
                                             @endforeach

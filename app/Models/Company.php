@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Company extends Model
 {
@@ -30,4 +31,23 @@ class Company extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    /**
+     * Get company logo
+     *
+     */
+    public function getLogoImage()
+    {
+        $storage_path = public_path('/images/companies/logo/'.$this->id.'/');
+
+        if(!empty($this->logo) && File::exists($storage_path.$this->logo))
+        {
+            // Get the filename from the full path
+            $filePath = '/images/companies/logo/'.$this->id.'/'.$this->logo;
+
+            return $filePath;
+        }
+
+        return '/images/profile-placeholder.png';
+    }
 }

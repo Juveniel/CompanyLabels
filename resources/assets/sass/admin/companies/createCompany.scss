@@ -1,10 +1,12 @@
-#company-create .fileinput-upl input{
+#company-create .fileinput-upl input,
+#company-update .fileinput-upl input{
   overflow: hidden;
   opacity:0;
   padding: 5px 0px;
   cursor: pointer;
 }
-#company-create .fileinput-upl span{
+#company-create .fileinput-upl span,
+#company-update .fileinput-upl span{
   position: absolute;
   bottom: 0px;
   pointer-events: none;
@@ -14,11 +16,13 @@
   @include easeInOutEff;
   border:1px solid transparent;
 }
-#company-create #avatar-holder{
+#company-create #avatar-holder,
+#company-update #avatar-holder{
   width:200px;
   height:150px;
 }
-#company-create .fileinput-thumbnail{
+#company-create .fileinput-thumbnail,
+#company-update .fileinput-thumbnail{
   display: inline-block;
   margin-bottom: 5px;
   overflow: hidden;
@@ -29,4 +33,8 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 4px;
+}
+#company-create #logo-holder,
+#company-update #logo-holder{
+  width: 200px;
 }

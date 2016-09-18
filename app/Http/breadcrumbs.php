@@ -66,19 +66,19 @@ Breadcrumbs::register('companies', function($breadcrumbs)
 Breadcrumbs::register('company-profile', function($breadcrumbs, $company)
 {
     $breadcrumbs->parent('companies');
-    $breadcrumbs->push('Company Profile', route('companyProfile', $company->id));
+    $breadcrumbs->push('Profile', route('companyProfile', $company['id']));
 });
 
 // Home > Companies > Create
-Breadcrumbs::register('company-create', function($breadcrumbs, $user)
+Breadcrumbs::register('company-create', function($breadcrumbs, $company)
 {
     $breadcrumbs->parent('companies');
-        $breadcrumbs->push('Create Company', route('create', $user));
+        $breadcrumbs->push('Create Company', route('create', $company));
 });
 
 // Home > Companies > Edit
-Breadcrumbs::register('company-edit', function($breadcrumbs, $user)
+Breadcrumbs::register('company-edit', function($breadcrumbs, $company)
 {
     $breadcrumbs->parent('companies');
-    $breadcrumbs->push('Update Company', route('user-edit', $user));
+    $breadcrumbs->push('Update Company', route('user-edit', $company));
 });

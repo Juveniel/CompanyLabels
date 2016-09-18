@@ -59,7 +59,7 @@
                                     <label class="col-lg-2 control-label">Name<span class="text-danger rq">*</span></label>
                                     <div class="col-lg-6">
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-building-o fa-fw"></i></div>
                                             {!! Form::text('name', null, array('class' => 'form-control')) !!}
                                         </div>
                                     </div>
@@ -79,38 +79,38 @@
                                     <label class="col-lg-2 control-label">Address<span class="text-danger rq">*</span></label>
                                     <div class="col-lg-6">
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></div>
                                             {!! Form::text('address', null, array('class' => 'form-control')) !!}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">Bulstat<span class="text-danger rq">*</span></label>
+                                    <label class="col-lg-2 control-label">Bulstat<span class="text-danger rq"></span></label>
                                     <div class="col-lg-6">
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-ellipsis-h fa-fw"></i></div>
                                             {!! Form::text('bulstat', null, array('class' => 'form-control')) !!}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">MOL<span class="text-danger rq">*</span></label>
+                                    <label class="col-lg-2 control-label">MOL<span class="text-danger rq"></span></label>
                                     <div class="col-lg-6">
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
                                             {!! Form::text('mol', null, array('class' => 'form-control')) !!}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">Description<span class="text-danger rq">*</span></label>
+                                    <label class="col-lg-2 control-label">Description<span class="text-danger rq"></span></label>
                                     <div class="col-lg-6">
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
-                                            {!! Form::text('description', null, array('class' => 'form-control')) !!}
+                                            <div class="input-group-addon"><i class="fa fa-text-width fa-fw"></i></div>
+                                            {!! Form::textarea('description', null, array('class' => 'form-control')) !!}
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@
     </section>
 
 
-    <div id="avatarFileTypeModal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="logoFileTypeModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -178,7 +178,7 @@
         </div>
     </div>
 
-    <div id="avatarFileReaderNS" class="modal fade" tabindex="-1" role="dialog">
+    <div id="logoFileReaderNS" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

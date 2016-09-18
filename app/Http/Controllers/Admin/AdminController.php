@@ -16,8 +16,9 @@ class AdminController extends Controller
         if (Auth::check() && Auth::user()->getRole() === 'admin') {
             return redirect('admin/dashboard');
         }
-
-        return redirect('/');
+        else{
+            return redirect('/');
+        }
     }
 
     public function dashboard(){
